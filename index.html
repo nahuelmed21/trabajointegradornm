@@ -9,17 +9,17 @@
   <body>
     <header>
       <h1>Página de Cielo Razzo</h1>
-    </header>
 
-    <nav>
-      <ul>
-        <li><a href="#biografia">Biografía</a></li>
-        <li><a href="#discografia">Discografía</a></li>
-        <li><a href="#galeria">Galería</a></li>
-        <li><a href="#cancionrec">Canción recomendada</a></li>
-        <li><a href="#conciertoprox">Concierto próximo</a></li>
-      </ul>
-    </nav>
+      <nav>
+        <ul>
+          <li><a href="#biografia">Biografía</a></li>
+          <li><a href="#discografia">Discografía</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#cancionrec">Canción recomendada</a></li>
+          <li><a href="#conciertoprox">Concierto próximo</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <main>
       <section id="biografia">
@@ -431,36 +431,70 @@
         </article>
 
         <h2>Recibe novedades de Cielo Razzo</h2>
-        <form action="#" method="post">
-          <label for="nombre">Nombre:</label><br />
-          <input
-            type="text"
-            id="nombre"
-            name="nombre"
-            placeholder="Nombre completo"
-            required
-          /><br /><br />
+        <form action="#">
+          <fieldset style="width: 350px">
+            <legend>Formulario de contacto</legend>
 
-          <label for="email">Email:</label><br />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="tucorreo@email.com"
-            required
-          /><br /><br />
+            <table>
+              <tr>
+                <td>Nombre:</td>
+                <td colspan="2">
+                  <input
+                    type="text"
+                    name="nombre"
+                    placeholder="Nombre completo"
+                    required
+                  />
+                </td>
+              </tr>
 
-          <label for="mensaje">Mensaje (opcional):</label><br />
-          <textarea
-            id="mensaje"
-            name="mensaje"
-            rows="4"
-            cols="50"
-            placeholder="Dejá tu comentario!"
-          ></textarea
-          ><br /><br />
+              <tr>
+                <td>Email:</td>
+                <td colspan="2">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="tucorreo@email.com"
+                    required
+                  />
+                </td>
+              </tr>
 
-          <input type="submit" value="Quiero recibir novedades" />
+              <tr>
+                <td rowspan="3">Sexo:</td>
+                <td>
+                  <input type="radio" name="sexo" value="masculino" required />
+                  Masculino
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="radio" name="sexo" value="femenino" /> Femenino
+                </td>
+              </tr>
+              <tr>
+                <td><input type="radio" name="sexo" value="otro" /> Otro</td>
+              </tr>
+
+              <tr>
+                <td>Mensaje:</td>
+                <td colspan="2">
+                  <textarea
+                    name="mensaje"
+                    rows="4"
+                    cols="30"
+                    placeholder="Dejá tu comentario!"
+                  ></textarea>
+                </td>
+              </tr>
+
+              <tr>
+                <td colspan="3" align="center">
+                  <input type="submit" value="Quiero recibir novedades" />
+                </td>
+              </tr>
+            </table>
+          </fieldset>
         </form>
       </section>
 
