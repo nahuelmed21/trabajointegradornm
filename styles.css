@@ -108,10 +108,61 @@ nav ul{
     border-radius: 10px;
 
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+
+     transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
 }
 
 .album img{
     width: 150px;
 
     border-radius: 10px;
+}
+
+.album:hover{
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+nav a{
+    text-decoration: none;
+
+    color: white;
+
+    padding: 10px 15px;
+
+    border-radius: 8px;
+
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+nav a:hover{
+    background-color: #c1121f;
+
+    transform: scale(1.05);
+}
+
+input[type="submit"]{
+    background-color:#c1121f;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 20px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+input[type="submit"]:hover{
+    background-color:#e5383b;
+
+    transform: scale(1.05);
 }
