@@ -89,3 +89,29 @@ nav ul{
 
     list-style: none;
 }
+
+.galeria-grid{
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 20px;
+
+    margin-top: 20px;
+}
+
+.album{
+    text-align: center;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.album img{
+    width: 150px;
+
+    border-radius: 10px;
+}
