@@ -81,3 +81,11 @@ footer{
 
     margin-top: 30px;
 }
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    list-style: none;
+}
