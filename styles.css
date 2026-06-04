@@ -70,6 +70,10 @@ video{
     border-radius: 10px;
 
     box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+
+    max-width: 100%;
+
+    height: auto;
 }
 
 footer{
@@ -90,6 +94,7 @@ nav ul{
     list-style: none;
 }
 
+
 .galeria-grid{
     display: grid;
 
@@ -99,6 +104,7 @@ nav ul{
 
     margin-top: 20px;
 }
+
 
 .album{
     text-align: center;
@@ -180,5 +186,82 @@ input[type="submit"]:hover{
 }
 
 header h1{
+    margin-bottom: 20px;
     animation: aparecer 2.5s ease-in-out;
+}
+
+/* Responsive para tablet */
+@media (max-width: 768px){
+
+    nav ul{
+        gap: 10px;
+    }
+
+    main{
+        padding: 10px;
+    }
+
+      table{
+        display: block;
+        overflow-x: auto;
+    }
+
+}
+
+/* Responsive para celular */
+@media (max-width: 480px){
+
+    nav ul{
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 10px;
+    }
+
+nav a{
+ display: block;
+        width: 100%;
+        text-align: center;
+}
+
+    .galeria-grid{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+iframe{
+    max-width: 100%;
+
+    border-radius: 10px;
+
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+}
+
+/* Evita que los elementos puedan crecer más que el contenedor */
+fieldset{
+    max-width: 100%;
+}
+
+input,
+textarea{
+    max-width: 100%;
+}
+
+nav{
+    margin-bottom: 20px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Hace que los campos ocupen todo el ancho disponible sin desbordarse por culpa del padding o los bordes */
+input[type="text"],
+input[type="email"],
+textarea{
+    width: 100%;
+    box-sizing: border-box;
 }
