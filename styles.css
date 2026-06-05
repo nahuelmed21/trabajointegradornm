@@ -375,3 +375,58 @@ footer a:hover {
     color: #e5383b;
     border-bottom: 1px solid #e5383b;
 }
+
+#conciertoprox {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Contenedor interno tipo card */
+#conciertoprox article {
+    background: rgba(255,255,255,0.02);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Párrafos más legibles */
+#conciertoprox p {
+    margin-bottom: 14px;
+    line-height: 1.7;
+}
+
+/* Destacar etiquetas (Fecha, Lugar, Hora, etc.) */
+#conciertoprox p strong {
+    color: var(--color-principal);
+}
+
+/* Links estilo moderno */
+#discografia a ,
+#conciertoprox a {
+    color: #ff4b55; /* rojo más brillante que el principal */
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 75, 85, 0.3);
+    transition: 0.2s ease;
+}
+
+#discografia a:hover ,
+#conciertoprox a:hover {
+    color: #ffffff;
+    background-color: var(--color-principal);
+    padding: 2px 4px;
+    border-radius: 4px;
+    border-bottom: 1px solid transparent;
+}
+
+/* Mapa prolijo */
+#conciertoprox iframe {
+    width: 100%;
+    max-width: 700px;
+    height: 350px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+    margin-top: 10px;
+}
