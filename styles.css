@@ -2,8 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-    transition: all 0.2s ease;
 }
 
 :root{
@@ -12,153 +10,22 @@
     --color-principal: #c1121f;
     --color-texto: #f5f5f5;
     --color-tarjeta: #343a40;
-
     --fuente-principal: 'Montserrat', sans-serif;
 }
 
+/* BASE */
 body{
     background-color: var(--color-fondo);
     color: var(--color-texto);
     font-family: var(--fuente-principal);
-
-    margin: 0;
-    padding: 0;
 }
 
+/* HEADER */
 header{
     background-color: var(--color-principal);
-
     padding: 20px;
-
     text-align: center;
-
     box-shadow: 0px 3px 10px rgba(0,0,0,0.4);
-}
-
-main{
-    max-width: 1200px;
-
-    margin: 30px auto;
-
-    padding: 20px;
-}
-
-section,
-aside{
-    background-color: var(--color-tarjeta);
-
-    padding: 25px;
-
-    margin-bottom: 50px;
-
-    border: 1px solid #555;
-
-    border-radius: 15px;
-
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
-}
-
-img{
-    border-radius: 10px;
-
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
-
-     display: block;
-    max-width: 100%;
-}
-
-video{
-    border-radius: 10px;
-
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
-
-    max-width: 100%;
-
-    height: auto;
-}
-
-footer{
-    background-color: var(--color-principal);
-
-    text-align: center;
-
-    padding: 20px;
-
-    margin-top: 30px;
-}
-
-nav ul{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-
-    list-style: none;
-}
-
-
-.galeria-grid{
-    display: grid;
-
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-
-    gap: 20px;
-
-    margin-top: 20px;
-}
-
-
-.album{
-    text-align: center;
-
-    padding: 15px;
-
-    border-radius: 10px;
-
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-
-     transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
-}
-
-.album img{
-    width: 150px;
-
-    border-radius: 10px;
-}
-
-.album:hover{
-    transform: translateY(-5px);
-
-    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
-}
-
-nav a{
-    text-decoration: none;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 8px;
-    border: 1px solid transparent;
-     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
-                
-}
-
-nav a:hover{
-    background-color: #c1121f;
-    transform: translateY(-2px);
-    border-color: white;
-    box-shadow: 0 0 6px rgba(255,255,255,0.15);
-}
-
-@keyframes aparecer{
-    from{
-        opacity:0;
-        transform: translateY(-30px);
-    }
-
-    to{
-        opacity:1;
-        transform: translateY(0);
-    }
 }
 
 header h1{
@@ -166,73 +33,115 @@ header h1{
     animation: aparecer 2.5s ease-in-out;
 }
 
-/* Responsive para tablet */
-@media (max-width: 768px){
-
-    nav ul{
-        gap: 10px;
-    }
-
-    main{
-        padding: 10px;
-    }
-
-      table{
-        display: block;
-        overflow-x: auto;
-    }
-
-}
-
-/* Responsive para celular */
-@media (max-width: 480px){
-
-    nav ul{
-        flex-direction: column;
-
-        align-items: center;
-
-        gap: 10px;
-    }
-
-nav a{
- display: block;
-        width: 100%;
-        text-align: center;
-}
-
-    .galeria-grid{
-        grid-template-columns: 1fr;
-    }
-
-     .form-grid{
-        grid-template-columns:1fr;
-    }
-
-}
-
-iframe{
-    max-width: 100%;
-
-    border-radius: 10px;
-
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
-
-    border: 0;
-}
-
-/* Evita que los elementos puedan crecer más que el contenedor */
-fieldset{
-    max-width: 100%;
+/* LAYOUT GENERAL */
+main{
+    max-width: 1200px;
+    margin: 30px auto;
     padding: 20px;
-    border: 1px solid #555;
-    border-radius: 12px;
 }
 
+/* SECCIONES */
+section,
+aside{
+    background-color: var(--color-tarjeta);
+    padding: 25px;
+    margin-bottom: 50px;
+    border: 1px solid #555;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* TEXTOS */
+section p{
+    margin-bottom: 16px;
+    line-height: 1.7;
+}
+
+h2, h3{
+    margin-bottom: 10px;
+}
+
+section h2{
+    border-left: 4px solid var(--color-principal);
+    padding-left: 10px;
+}
+
+/* IMÁGENES Y VIDEO */
+img{
+    display: block;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+}
+
+video{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+}
+
+/* NAV */
 nav{
     margin-bottom: 20px;
 }
 
+nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid white;
+    transition: 0.2s ease;
+    background-color: transparent;
+}
+
+nav a:hover{
+    background-color: var(--color-principal);
+    color: white;
+    border-color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+/* GALERÍA */
+.galeria-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.album{
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+.album img{
+    width: 150px;
+    border-radius: 10px;
+}
+
+/* TABLAS */
 table{
     width: 100%;
     border-collapse: collapse;
@@ -244,52 +153,106 @@ table{
     margin-bottom: 20px;
 }
 
-
-.form-grid{
-    display:grid;
-    grid-template-columns: 150px 1fr;
-    gap:15px;
-    align-items:center;
+th, td{
+    padding: 12px 15px;
+    text-align: center;
 }
 
-.radio-group{
-    display:flex;
-    flex-direction:column;
-    gap:8px;
+th{
+    background-color: #b10f1a;
+    color: white;
+    font-weight: 700;
 }
 
-button{
+tr{
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
 
+tr:hover{
+    background-color: rgba(193, 18, 31, 0.18);
+}
+
+/* LINKS GENERALES */
+a{
+    color: var(--color-principal);
+    text-decoration: none;
+}
+
+a:hover{
+    color: #e5383b;
+    border-bottom: 1px solid #e5383b;
+}
+
+/* DISCOS + CONCIERTO LINKS */
+#discografia a,
+#conciertoprox a{
+    color: #ff4b55;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255,75,85,0.3);
+}
+
+#discografia a:hover,
+#conciertoprox a:hover{
     background-color: var(--color-principal);
     color: white;
-
-    border: none;
-    padding: 12px;
-
-    border-radius: 8px;
-
-    cursor: pointer;
-
-    transition: transform 0.3s ease, background-color 0.3s ease;
-
-    width: auto;
-    
-    max-width: 200px;
+    padding: 2px 4px;
+    border-radius: 4px;
 }
 
-button:hover{
-    background-color: #e5383b;
-    transform: translateY(-2px);
+/* CONCIERTO */
+#conciertoprox{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px;
 }
 
-button:focus{
-    outline: 2px solid white;
+#conciertoprox article{
+    background: rgba(255,255,255,0.02);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+#conciertoprox p{
+    margin-bottom: 14px;
+    line-height: 1.7;
+}
+
+#conciertoprox p strong{
+    color: var(--color-principal);
+}
+
+/* VIDEO CENTRADO */
+#cancionrec{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+#cancionrec video{
+    max-width: 500px;
+    width: 100%;
+}
+
+/* FORMULARIO */
+fieldset{
+    padding: 20px;
+    border: 1px solid #555;
+    border-radius: 12px;
+}
+
+.form-grid{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 15px;
+    align-items: center;
 }
 
 .form-grid input,
 .form-grid textarea{
     width: 100%;
-    box-sizing: border-box;
     padding: 10px;
     border-radius: 6px;
     border: 1px solid #555;
@@ -304,134 +267,29 @@ button:focus{
     margin-top: 10px;
 }
 
-form{
-margin-top: 20px;
-}
-
-th, td{
-    padding: 12px 15px;
-    text-align: center;
-}
-
-th{
-    background-color: #b10f1a; /* otro rojo */
+/* BOTÓN */
+button{
+    background-color: var(--color-principal);
     color: white;
-    font-weight: 700;
-}
-
-tr{
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-tr:hover{
-    background-color: rgba(255,255,255,0.05);
-}
-
-table:last-of-type tr td:first-child{
-    font-weight: bold;
-    color: var(--color-principal);
-}
-
-table:last-of-type td:nth-child(2){
-    text-align: left;
-}
-
-table:last-of-type tr:hover{
-    background-color: rgba(193, 18, 31, 0.15);
-}
-
-h2, h3{
-    margin-bottom: 10px;
-}
-
-section h2{
-    border-left: 4px solid var(--color-principal);
-    padding-left: 10px;
-}
-
-section p {
-    margin-bottom: 16px;
-    line-height: 1.6;
-}
-
-section {
-    display: block;
-    flex-direction: column;
-    gap: 15px;
-}
-
-main a,
-section a,
-aside a,
-footer a {
-    color: var(--color-principal);
-    text-decoration: none;
-}
-
-main a:hover,
-section a:hover,
-aside a:hover,
-footer a:hover {
-    color: #e5383b;
-    border-bottom: 1px solid #e5383b;
-}
-
-#conciertoprox {
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-/* Contenedor interno tipo card */
-#conciertoprox article {
-    background: rgba(255,255,255,0.02);
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.08);
-}
-
-/* Párrafos más legibles */
-#conciertoprox p {
-    margin-bottom: 14px;
-    line-height: 1.7;
-}
-
-/* Destacar etiquetas (Fecha, Lugar, Hora, etc.) */
-#conciertoprox p strong {
-    color: var(--color-principal);
-}
-
-/* Links estilo moderno */
-#discografia a ,
-#conciertoprox a {
-    color: #ff4b55; /* rojo más brillante que el principal */
-    font-weight: 600;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(255, 75, 85, 0.3);
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    max-width: 200px;
     transition: 0.2s ease;
 }
 
-#discografia a:hover ,
-#conciertoprox a:hover {
-    color: #ffffff;
-    background-color: var(--color-principal);
-    padding: 2px 4px;
-    border-radius: 4px;
-    border-bottom: 1px solid transparent;
+button:hover{
+    background-color: #e5383b;
+    transform: translateY(-2px);
 }
 
-/* Mapa prolijo */
-#conciertoprox iframe {
-    width: 100%;
-    max-width: 700px;
-    height: 350px;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
-    margin-top: 10px;
+button:focus{
+    outline: 2px solid white;
 }
 
-footer {
+/* FOOTER */
+footer{
     background-color: var(--color-principal);
     text-align: center;
     padding: 20px;
@@ -439,17 +297,84 @@ footer {
     color: white;
 }
 
-/* Links del footer */
-footer a {
-    color: #ffffff;
-    text-decoration: none;
+footer a{
+    color: white;
     margin: 0 8px;
     opacity: 0.85;
-    transition: 0.2s ease;
 }
 
-/* Hover minimalista */
-footer a:hover {
-     color: #000000;
+footer a:hover{
+    color: black;
     opacity: 1;
+}
+
+/* ANIMACIÓN */
+@keyframes aparecer{
+    from{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px){
+    nav ul{
+        gap: 10px;
+    }
+
+    main{
+        padding: 10px;
+    }
+
+    table{
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 480px){
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav a{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .galeria-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+#discografia td:first-child{
+    color: var(--color-principal);
+    font-weight: 600;
+}
+
+#discografia td:nth-child(2){
+    color: var(--color-texto);
+    font-weight: 400;
+    opacity: 0.85;
+}
+
+table:last-of-type td:nth-child(2){
+    color: var(--color-principal);
+    font-weight: 600;
+}
+
+.album h3{
+    color: var(--color-principal);
+    font-weight: 600;
 }
