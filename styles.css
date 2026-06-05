@@ -430,3 +430,26 @@ footer a:hover {
     box-shadow: 0 6px 18px rgba(0,0,0,0.4);
     margin-top: 10px;
 }
+
+footer {
+    background-color: var(--color-principal);
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    color: white;
+}
+
+/* Links del footer */
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 8px;
+    opacity: 0.85;
+    transition: 0.2s ease;
+}
+
+/* Hover minimalista */
+footer a:hover {
+     color: #000000;
+    opacity: 1;
+}
