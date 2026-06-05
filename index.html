@@ -399,7 +399,6 @@
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1742.1542586879827!2d-59.6570703!3d-29.1555795!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x944ebaa0f52a7dc7%3A0xbd75799ade9aa456!2sMaxi%20Kiosco%20Tu%20Esquina!5e0!3m2!1ses-419!2sar!4v1775712774126!5m2!1ses-419!2sar"
             width="600"
             height="450"
-            style="border: 0"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
@@ -408,70 +407,55 @@
 
         <h2>Recibe novedades de Cielo Razzo</h2>
         <form action="#">
-          <fieldset>
-            <legend>Formulario de contacto</legend>
+  <fieldset>
+    <legend>Formulario de contacto</legend>
 
-            <table>
-              <tr>
-                <td>Nombre:</td>
-                <td colspan="2">
-                  <input
-                    type="text"
-                    name="nombre"
-                    placeholder="Nombre completo"
-                    required
-                  />
-                </td>
-              </tr>
+    <div class="form-grid">
 
-              <tr>
-                <td>Email:</td>
-                <td colspan="2">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="tucorreo@email.com"
-                    required
-                  />
-                </td>
-              </tr>
+      <label for="nombre">Nombre:</label>
+      <input
+        id="nombre"
+        type="text"
+        name="nombre"
+        placeholder="Nombre completo"
+        required
+      >
 
-              <tr>
-                <td rowspan="3">Sexo:</td>
-                <td>
-                  <input type="radio" name="sexo" value="masculino" required />
-                  Masculino
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input type="radio" name="sexo" value="femenino" /> Femenino
-                </td>
-              </tr>
-              <tr>
-                <td><input type="radio" name="sexo" value="otro" /> Otro</td>
-              </tr>
+      <label for="email">Email:</label>
+      <input
+        id="email"
+        type="email"
+        name="email"
+        placeholder="tucorreo@email.com"
+        required
+      >
 
-              <tr>
-                <td>Mensaje:</td>
-                <td colspan="2">
-                  <textarea
-                    name="mensaje"
-                    rows="4"
-                    cols="30"
-                    placeholder="Dejá tu comentario!"
-                  ></textarea>
-                </td>
-              </tr>
+      <label>Sexo:</label>
 
-              <tr>
-                <td colspan="3" align="center">
-                  <input type="submit" value="Quiero recibir novedades" />
-                </td>
-              </tr>
-            </table>
-          </fieldset>
-        </form>
+      <div class="radio-group">
+        <label><input type="radio" name="sexo"> Masculino</label>
+        <label><input type="radio" name="sexo"> Femenino</label>
+        <label><input type="radio" name="sexo"> Otro</label>
+      </div>
+
+      <label for="mensaje">Mensaje:</label>
+
+      <textarea
+        id="mensaje"
+        name="mensaje"
+        rows="4"
+        placeholder="Dejá tu comentario!"
+      ></textarea>
+
+      <tr>
+  <td colspan="3">
+    <button type="submit">Quiero recibir novedades</button>
+  </td>
+</tr>
+
+    </div>
+  </fieldset>
+</form>
       </section>
 
       <aside>
