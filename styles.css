@@ -435,3 +435,7 @@ table:last-of-type td:nth-child(2) {
   max-width: 100%;
   border-radius: 10px;
 }
+
+#listaAlbums {
+  display: none;
+}
