@@ -21,7 +21,8 @@ Este proyecto consiste en una página web dedicada a la banda de rock argentina 
 - Google Fonts (Montserrat) para la tipografía principal.
 - Google Maps Embed para la integración del mapa interactivo.
 - Etiquetas multimedia de HTML5 (video) para la reproducción de contenido audiovisual.
-- Media Queries para mejorar la visualización en dispositivos móviles y tablets.
+- Media Queries para mejorar la visualización en dispositivos móviles y tablets.   
+- JavaScript (ES6) para la interactividad, manipulación del DOM, eventos y lógica del buscador.     
 
 ## Mejoras visuales incorporadas
 - Implementación de una paleta de colores oscura inspirada en la estética del rock.
@@ -33,6 +34,13 @@ Este proyecto consiste en una página web dedicada a la banda de rock argentina 
 - Galería de álbumes organizada con CSS Grid para una distribución adaptable.
 - Centrado y adaptación responsiva del video y del mapa integrado.
 - Formularios estilizados para mantener coherencia visual con el resto del sitio.
+
+## Funcionalidades interactivas
+- Galería interactiva de álbumes - Al hacer click en una imagen de la galería, se muestra el nombre del álbum seleccionado, uso de eventos click y manipulación del DOM.
+- Buscador de álbumes - Permite buscar discos de la banda escribiendo su nombre, utiliza un array de objetos como base de datos de la discografía, implementa el método find() junto con includes() para búsquedas parciales, muestra información dinámica del álbum encontrado.
+- Renderizado dinámico de discografía - Se genera una lista de álbumes a partir de un array utilizando createElement y appendChild.
+- Formulario de contacto con validación - validación de campos obligatorios (nombre, email y mensaje), uso de try/catch para manejo de errores, mensajes dinámicos de éxito o error mostrados al usuario.
+- Eventos interactivos adicionales - Submit en formulario, click en imágenes y botones, keyup para permitir búsqueda con tecla Enter.
 
 ## Autor
 Nahuel Medina

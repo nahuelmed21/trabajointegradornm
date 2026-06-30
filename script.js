@@ -1,5 +1,4 @@
-//console.log("cargar JavaScript.");
-
+/* GALERÍA - INTERACCIÓN DE ÁLBUM*/
 function mostrarAlbum(evento) {
   const album = evento.target.dataset.album;
 
@@ -13,10 +12,7 @@ imagenes.forEach((imagen) => {
   imagen.addEventListener("click", mostrarAlbum);
 });
 
-const formulario = document.getElementById("formContacto");
-
-formulario.addEventListener("submit", validarFormulario);
-
+/* FORMULARIO - VALIDACIÓN */
 function validarFormulario(evento) {
   evento.preventDefault();
 
@@ -36,6 +32,11 @@ function validarFormulario(evento) {
   }
 }
 
+const formulario = document.getElementById("formContacto");
+
+formulario.addEventListener("submit", validarFormulario);
+
+/* DATOS - ARRAY DE ÁLBUMES */
 const albums = [
   { nombre: "Buenas", año: 2001 },
   { nombre: "Código de barras", año: 2003 },
@@ -49,6 +50,7 @@ const albums = [
   { nombre: "El día fuera del tiempo", año: 2024 },
 ];
 
+/* RENDER DINÁMICO DE LISTA */
 function renderizarAlbums() {
   const contenedor = document.getElementById("listaAlbums");
   contenedor.innerHTML = "";
@@ -60,6 +62,7 @@ function renderizarAlbums() {
   });
 }
 
+/* SI QUISIERA MOSTRAR LISTA AL CARGAR */
 //renderizarAlbums();
 
 function buscarAlbum() {
@@ -68,6 +71,12 @@ function buscarAlbum() {
     .value.trim()
     .toLowerCase();
   const resultado = document.getElementById("resultadoBusqueda");
+
+  /* SINO DEVUELVE PRIMER ÁLBUM */
+  if (input === "") {
+    resultado.textContent = "Escribí un álbum para buscar.";
+    return;
+  }
 
   const albumEncontrado = albums.find((album) =>
     album.nombre.toLowerCase().includes(input),
@@ -83,6 +92,7 @@ function buscarAlbum() {
 
 document.getElementById("btnBuscar").addEventListener("click", buscarAlbum);
 
+/* BUSCAR CON ENTER */
 document.getElementById("buscadorAlbum").addEventListener("keyup", (e) => {
   if (e.key === "Enter") {
     buscarAlbum();
